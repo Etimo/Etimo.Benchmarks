@@ -12,5 +12,8 @@
     <iconUrl>https://avatars0.githubusercontent.com/u/8019178?s=140</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>Etimo Benchmark Performance</tags>
+	<frameworkAssemblies>
+		<frameworkAssembly assemblyName="Microsoft.VisualBasic" />
+	</frameworkAssemblies>
   </metadata>
 </package>
