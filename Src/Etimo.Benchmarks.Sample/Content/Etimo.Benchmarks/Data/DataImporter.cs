@@ -12,7 +12,7 @@ namespace Etimo.Benchmarks.Sample.Content.Data
     {
         public IList<CountryOrRegionGdpData> Import()
         {
-            DirectoryInfo directoryInfoExecutingAssembly = new FileInfo(Assembly.GetExecutingAssembly().Location).Directory;
+            DirectoryInfo directoryInfoExecutingAssembly = new FileInfo(Assembly.GetExecutingAssembly().Location).Directory.Parent.Parent;
             FileInfo fileInfoData = directoryInfoExecutingAssembly.EnumerateFiles("The World Bank - GDP Per Capita.csv", System.IO.SearchOption.AllDirectories).First();
 
             IList<CountryOrRegionGdpData> listOfData = ParseDataFile(fileInfoData);
