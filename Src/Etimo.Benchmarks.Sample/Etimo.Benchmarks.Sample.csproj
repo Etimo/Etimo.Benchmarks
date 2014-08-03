@@ -70,7 +70,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\The World Bank - GDP Per Capita.csv">
+    <Content Include="Content\Etimo.Benchmarks\Data\The World Bank - GDP Per Capita.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
