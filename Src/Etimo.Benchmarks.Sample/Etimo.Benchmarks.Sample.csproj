@@ -63,7 +63,7 @@
     <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationHasTwentyDoubledCount.cs" />
     <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationInitializationBase.cs" />
     <Compile Include="Content\Collections\StandardKeyedCollectionOfCountryOrRegionGdpData.cs" />
-    <Compile Include="Content\Program.cs" />
+    <Content Include="Content\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
