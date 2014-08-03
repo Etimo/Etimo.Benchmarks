@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48E9C8CD-0033-45EC-8D12-FF03A8CFA472}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Etimo.Benchmarks</RootNamespace>
+    <AssemblyName>Etimo.Benchmarks</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementations\Operations\OperationBase.cs" />
+    <Compile Include="Implementations\Operations\OperationGroup.cs" />
+    <Compile Include="Implementations\Operations\OperationGroupBase.cs" />
+    <Compile Include="Implementations\Operations\OperationWithAction.cs" />
+    <Compile Include="Implementations\Operations\OperationWithFunc.cs" />
+    <Compile Include="Implementations\Results\BenchmarkComponentResult.cs" />
+    <Compile Include="Implementations\Results\Durations.cs" />
+    <Compile Include="Implementations\Results\OperationGroupResult.cs" />
+    <Compile Include="Implementations\Results\OperationResultBase.cs" />
+    <Compile Include="Implementations\Results\OperationWithActionResult.cs" />
+    <Compile Include="Implementations\Results\OperationWithFuncResult.cs" />
+    <Compile Include="Implementations\Results\SingleIterationOperationGroupResult.cs" />
+    <Compile Include="Implementations\Results\SingleIterationOperationResultBase.cs" />
+    <Compile Include="Implementations\Results\SingleIterationOperationWithActionResult.cs" />
+    <Compile Include="Implementations\Results\SingleIterationOperationWithFuncResult.cs" />
+    <Compile Include="Interfaces\Components\IBenchmarkComponent.cs" />
+    <Compile Include="Interfaces\Operations\IOperationBase.cs" />
+    <Compile Include="Interfaces\Operations\IOperationGroup.cs" />
+    <Compile Include="Interfaces\Operations\IOperationGroupBase.cs" />
+    <Compile Include="Interfaces\Operations\IOperationWithAction.cs" />
+    <Compile Include="Interfaces\Operations\IOperationWithFunc.cs" />
+    <Compile Include="Interfaces\Results\IBenchmarkComponentResult.cs" />
+    <Compile Include="Interfaces\Results\IDurations.cs" />
+    <Compile Include="Interfaces\Results\IOperationGroupResult.cs" />
+    <Compile Include="Interfaces\Results\IOperationResultBase.cs" />
+    <Compile Include="Interfaces\Results\IOperationWithActionResult.cs" />
+    <Compile Include="Interfaces\Results\IOperationWithFuncResult.cs" />
+    <Compile Include="Interfaces\Results\ISingleIterationOperationGroupResult.cs" />
+    <Compile Include="Interfaces\Results\ISingleIterationOperationResultBase.cs" />
+    <Compile Include="Interfaces\Results\ISingleIterationOperationWithActionResult.cs" />
+    <Compile Include="Interfaces\Results\ISingleIterationOperationWithFuncResult.cs" />
+    <Compile Include="Processors\BenchmarkProcessor.cs" />
+    <Compile Include="Processors\BenchmarkProcessorConfiguration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
