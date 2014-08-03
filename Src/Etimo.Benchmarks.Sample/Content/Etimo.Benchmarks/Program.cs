@@ -10,9 +10,9 @@ using Etimo.Benchmarks.Sample.Content.Data;
 
 namespace Etimo.Benchmarks.Sample.Content
 {
-    class Program
+    public class Sample
     {
-        static void Main()
+        public static void RunSample()
         {
             IList<CountryOrRegionGdpData> listData = new DataImporter().Import();
 
@@ -35,7 +35,7 @@ namespace Etimo.Benchmarks.Sample.Content
             Console.ReadLine();
         }
 
-        public static string FormatBenchmarkResults(IOperationResultBase benchmarkResult, int nestingLevel)
+        private static string FormatBenchmarkResults(IOperationResultBase benchmarkResult, int nestingLevel)
         {
             string formattedResults = nestingLevel == 0 ? "" : new string('-', nestingLevel * 3) + '→' + ' ';
             formattedResults += string.Format("{0}: {1}", benchmarkResult.Name.PadRight(22), benchmarkResult.Durations.Min.TotalMilliseconds.ToString("0.000 ms.").PadLeft(12));
