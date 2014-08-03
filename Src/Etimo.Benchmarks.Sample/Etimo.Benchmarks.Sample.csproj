@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3F4FDCD-BCF2-4242-AFF6-5BA9C87232B9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Etimo.Benchmarks.Sample</RootNamespace>
+    <AssemblyName>Etimo.Benchmarks.Sample</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Etimo.Benchmarks">
+      <HintPath>..\packages\Etimo.Benchmarks.1.0.0\lib\net40\Etimo.Benchmarks.dll</HintPath>
+    </Reference>
+    <Reference Include="Etimo.Common.Collections">
+      <HintPath>..\packages\Etimo.Common.Collections.1.1.0\lib\net40\Etimo.Common.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Data\DataImporter.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\BenchmarkComponents\BenchmarkComponentBase.cs" />
+    <Compile Include="Content\Benchmarks\MultiplyIndexedKeyedCollection\BenchmarkComponentMultiply.cs" />
+    <Compile Include="Content\Benchmarks\KeyedCollection\BenchmarkComponentStandard.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\CollectionBenchmarkRootOperation.cs" />
+    <Compile Include="Content\Data\CountryOrRegionGdpData.cs" />
+    <Compile Include="Content\Collections\MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByCode.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByName.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationGroupByIncrease.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationHasFiveDoubledCount.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationHasTenDoubledCount.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationHasTwentyDoubledCount.cs" />
+    <Compile Include="Content\Benchmarks\BenchmarkBase\Operations\OperationInitializationBase.cs" />
+    <Compile Include="Content\Collections\StandardKeyedCollectionOfCountryOrRegionGdpData.cs" />
+    <Compile Include="Content\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Benchmarks\The World Bank - GDP Per Capita.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
