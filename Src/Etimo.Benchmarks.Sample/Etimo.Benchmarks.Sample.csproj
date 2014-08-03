@@ -51,26 +51,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Etimo.Benchmarks\Data\DataImporter.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\BenchmarkComponents\BenchmarkComponentBase.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\MultiplyIndexedKeyedCollection\BenchmarkComponentMultiply.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\KeyedCollection\BenchmarkComponentStandard.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\CollectionBenchmarkRootOperation.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Data\CountryOrRegionGdpData.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Collections\MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByCode.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByName.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationGroupByIncrease.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationHasFiveDoubledCount.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationHasTenDoubledCount.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationHasTwentyDoubledCount.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationInitializationBase.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Collections\StandardKeyedCollectionOfCountryOrRegionGdpData.cs" />
-    <Content Include="Content\Etimo.Benchmarks\Sample.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Data\DataImporter.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\BenchmarkComponents\BenchmarkComponentBase.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\MultiplyIndexedKeyedCollection\BenchmarkComponentMultiply.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\KeyedCollection\BenchmarkComponentStandard.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\CollectionBenchmarkRootOperation.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Data\CountryOrRegionGdpData.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Collections\MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByCode.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByName.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationGroupByIncrease.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationHasFiveDoubledCount.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationHasTenDoubledCount.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationHasTwentyDoubledCount.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Benchmarks\BenchmarkBase\Operations\OperationInitializationBase.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Collections\StandardKeyedCollectionOfCountryOrRegionGdpData.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks\Sample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Etimo.Benchmarks\Data\The World Bank - GDP Per Capita.csv">
+    <Content Include="Content\Samples\Etimo.Benchmarks\Data\The World Bank - GDP Per Capita.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
