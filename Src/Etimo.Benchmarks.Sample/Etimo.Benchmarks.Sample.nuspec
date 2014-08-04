@@ -6,7 +6,7 @@
     <title>Etimo.Benchmarks.Sample</title>
     <authors>Etimo</authors>
     <owners>Etimo</owners>
-    <description>Sample of Benchmark package published by Etimo</description>
+    <description>Sample for using Etimo.Benchmarks package published by Etimo</description>
     <licenseUrl>http://unlicense.org/UNLICENSE</licenseUrl>
     <!--<projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>-->
     <iconUrl>https://avatars0.githubusercontent.com/u/8019178?s=140</iconUrl>

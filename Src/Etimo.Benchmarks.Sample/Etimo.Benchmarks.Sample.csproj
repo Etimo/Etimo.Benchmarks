@@ -73,6 +73,7 @@
     <Content Include="Content\Samples\Etimo.Benchmarks\Data\The World Bank - GDP Per Capita.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Etimo.Benchmarks.Sample.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
