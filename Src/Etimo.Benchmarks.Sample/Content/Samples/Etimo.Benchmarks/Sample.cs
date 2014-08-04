@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Etimo.Benchmarks.Interfaces.Results;
 using Etimo.Benchmarks.Processors;
-using Etimo.Benchmarks.Sample.Content.Benchmarks.BenchmarkBase.BenchmarkComponents;
-using Etimo.Benchmarks.Sample.Content.Benchmarks.KeyedCollection;
-using Etimo.Benchmarks.Sample.Content.Benchmarks.MultiplyIndexedKeyedCollection;
-using Etimo.Benchmarks.Sample.Content.Data;
+using Samples.Etimo.Benchmarks.BenchmarkDefinitions.BenchmarkBase.BenchmarkComponents;
+using Samples.Etimo.Benchmarks.BenchmarkDefinitions.KeyedCollection;
+using Samples.Etimo.Benchmarks.BenchmarkDefinitions.MultiplyIndexedKeyedCollection;
+using Samples.Etimo.Benchmarks.Data;
 
-namespace Etimo.Benchmarks.Sample.Content
+namespace Samples.Etimo.Benchmarks
 {
     public class Sample
     {

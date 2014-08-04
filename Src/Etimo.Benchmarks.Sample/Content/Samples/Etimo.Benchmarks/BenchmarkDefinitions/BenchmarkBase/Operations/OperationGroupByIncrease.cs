@@ -1,6 +1,6 @@
 using Etimo.Benchmarks.Interfaces.Operations;
 
-namespace Etimo.Benchmarks.Sample.Content.Benchmarks.BenchmarkBase.Operations
+namespace Samples.Etimo.Benchmarks.BenchmarkDefinitions.BenchmarkBase.Operations
 {
     public class OperationGroupByIncrease : IOperationGroup<OperationHasFiveDoubledCount, OperationHasTenDoubledCount, OperationHasTwentyDoubledCount>
     {

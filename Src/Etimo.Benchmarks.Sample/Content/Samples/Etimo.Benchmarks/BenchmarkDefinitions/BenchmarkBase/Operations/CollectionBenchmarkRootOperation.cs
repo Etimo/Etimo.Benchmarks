@@ -1,6 +1,6 @@
 using Etimo.Benchmarks.Interfaces.Operations;
 
-namespace Etimo.Benchmarks.Sample.Content.Benchmarks.BenchmarkBase.Operations
+namespace Samples.Etimo.Benchmarks.BenchmarkDefinitions.BenchmarkBase.Operations
 {
     public class CollectionBenchmarkRootOperation : IOperationGroup<OperationInitializationBase, OperationGetGdp2010ByCode, OperationGetGdp2010ByName, OperationGroupByIncrease>
     {

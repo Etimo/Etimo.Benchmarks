@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Etimo.Benchmarks.Sample.Content.Data;
+using Samples.Etimo.Benchmarks.Data;
 using Etimo.Common.Collections.KeyedCollections;
 
-namespace Etimo.Benchmarks.Sample.Content.Collections
+namespace Samples.Etimo.Benchmarks.Collections
 {
     public class MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData : MultiplyIndexedKeyedCollectionBase<CountryOrRegionGdpData>
     {

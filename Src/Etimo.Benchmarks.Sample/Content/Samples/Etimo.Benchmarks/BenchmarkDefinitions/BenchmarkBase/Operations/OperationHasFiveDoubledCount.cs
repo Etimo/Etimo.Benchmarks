@@ -1,7 +1,7 @@
 using System;
 using Etimo.Benchmarks.Interfaces.Operations;
 
-namespace Etimo.Benchmarks.Sample.Content.Benchmarks.BenchmarkBase.Operations
+namespace Samples.Etimo.Benchmarks.BenchmarkDefinitions.BenchmarkBase.Operations
 {
     public class OperationHasFiveDoubledCount : IOperationWithFunc<int>
     {
