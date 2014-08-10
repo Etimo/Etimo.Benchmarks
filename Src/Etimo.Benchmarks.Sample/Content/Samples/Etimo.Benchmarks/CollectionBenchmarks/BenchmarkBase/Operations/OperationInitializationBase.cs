@@ -1,9 +1,9 @@
 using System;
 using Etimo.Benchmarks.Interfaces.Operations;
 
-namespace Samples.Etimo.Benchmarks.BenchmarkDefinitions.BenchmarkBase.Operations
+namespace Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.Operations
 {
-    public class OperationInitializationBase : IOperationWithAction
+    public class OperationInitialization : IOperationWithAction
     {
         public string Name { get { return "Initialization"; } }
         public Action Delegate { get; set; }

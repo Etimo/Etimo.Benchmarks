@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using Etimo.Benchmarks.Implementations.Results;
 using Etimo.Benchmarks.Interfaces.Components;
 using Etimo.Benchmarks.Interfaces.Operations;
@@ -44,9 +45,32 @@ namespace Etimo.Benchmarks.Processors
             };
         }
 
+        private bool IsJitOptimizerDisabled(Assembly assembly)
+        {
+            return assembly.GetCustomAttributes(typeof (DebuggableAttribute), false)
+                .Select(customAttribute => (DebuggableAttribute) customAttribute)
+                .Any(attribute => attribute.IsJITOptimizerDisabled);
+        }
+
+        private void EnsureAssembliesAreAllowed(BenchmarkProcessorConfiguration benchmarkProcessorConfiguration, IEnumerable<Assembly> assemblies)
+        {
+            Assembly[] assembliesViolatingRuleJitOptimization = !benchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException ? new Assembly[] { } : assemblies.Where(IsJitOptimizerDisabled).ToArray();
+
+            if (assembliesViolatingRuleJitOptimization.Any())
+                throw new Exception("To allow benchmarks to be executed when jit optimization is disabled, set BenchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException to false. The following assemblies have jit optimization disabled:" + assembliesViolatingRuleJitOptimization.Select(assembly => Environment.NewLine + assembly));
+        }
+
         public IEnumerable<IBenchmarkComponentResult> Execute<T>(BenchmarkProcessorConfiguration benchmarkProcessorConfiguration, params Func<T>[] benchmarkComponents)
             where T : IBenchmarkComponent<IOperationBase>
         {
+            if (benchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException)
+            {
+                AppDomain.CurrentDomain.AssemblyLoad += (sender, args) => EnsureAssembliesAreAllowed(benchmarkProcessorConfiguration, new [] {args.LoadedAssembly});
+
+                EnsureAssembliesAreAllowed(benchmarkProcessorConfiguration, AppDomain.CurrentDomain.GetAssemblies());
+            }
+
+
             for (int iterationIndex = 0; iterationIndex < benchmarkProcessorConfiguration.WarmupIterationCount; iterationIndex++)
                 foreach (Func<T> benchmarkFactory in benchmarkComponents)
                     BenchmarkAndExecuteInner(benchmarkProcessorConfiguration, benchmarkFactory().RootOperation);
@@ -136,6 +160,9 @@ namespace Etimo.Benchmarks.Processors
                 GC.WaitForPendingFinalizers();
                 GC.Collect();
             }
+
+            if (benchmarkProcessorConfiguration.IfDebuggerIsAttachedThenThrowException && System.Diagnostics.Debugger.IsAttached)
+                throw new Exception("Debugger is attached. To allow benchmarks to be executed while the debugger is attached, set BenchmarkProcessorConfiguration.IfDebuggerIsAttachedThenThrowException to false.");
 
             if (operation is IOperationGroup<IOperationBase>)
             {
