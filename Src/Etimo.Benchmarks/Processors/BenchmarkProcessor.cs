@@ -57,7 +57,7 @@ namespace Etimo.Benchmarks.Processors
             Assembly[] assembliesViolatingRuleJitOptimization = !benchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException ? new Assembly[] { } : assemblies.Where(IsJitOptimizerDisabled).ToArray();
 
             if (assembliesViolatingRuleJitOptimization.Any())
-                throw new Exception("To allow benchmarks to be executed when jit optimization is disabled, set BenchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException to false. The following assemblies have jit optimization disabled:" + assembliesViolatingRuleJitOptimization.Select(assembly => Environment.NewLine + assembly));
+                throw new Exception("To allow benchmarks to be executed when jit optimization is disabled, set BenchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException to false. The following assemblies have jit optimization disabled:" + string.Join("", assembliesViolatingRuleJitOptimization.Select(assembly => Environment.NewLine + assembly)));
         }
 
         public IEnumerable<IBenchmarkComponentResult> Execute<T>(BenchmarkProcessorConfiguration benchmarkProcessorConfiguration, params Func<T>[] benchmarkComponents)
