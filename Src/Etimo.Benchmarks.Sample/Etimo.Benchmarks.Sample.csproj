@@ -35,11 +35,13 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Etimo.Benchmarks">
-      <HintPath>..\packages\Etimo.Benchmarks.1.0.0\lib\net40\Etimo.Benchmarks.dll</HintPath>
+    <Reference Include="Etimo.Benchmarks, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Etimo.Benchmarks.2.0.0\lib\net40\Etimo.Benchmarks.dll</HintPath>
     </Reference>
-    <Reference Include="Etimo.Common.Collections">
-      <HintPath>..\packages\Etimo.Common.Collections.1.1.0\lib\net40\Etimo.Common.Collections.dll</HintPath>
+    <Reference Include="Etimo.Common.Collections, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Etimo.Common.Collections.1.1.1\lib\net40\Etimo.Common.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
