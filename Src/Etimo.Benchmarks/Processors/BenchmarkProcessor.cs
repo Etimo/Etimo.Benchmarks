@@ -54,16 +54,16 @@ namespace Etimo.Benchmarks.Processors
 
         private void EnsureAssembliesAreAllowed(BenchmarkProcessorConfiguration benchmarkProcessorConfiguration, IEnumerable<Assembly> assemblies)
         {
-            Assembly[] assembliesViolatingRuleJitOptimization = !benchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException ? new Assembly[] { } : assemblies.Where(IsJitOptimizerDisabled).ToArray();
+            Assembly[] assembliesViolatingRuleJitOptimization = !benchmarkProcessorConfiguration.IfJitOptimizerIsDisabledThenThrowException ? new Assembly[] { } : assemblies.Where(IsJitOptimizerDisabled).ToArray();
 
             if (assembliesViolatingRuleJitOptimization.Any())
-                throw new Exception("To allow benchmarks to be executed when jit optimization is disabled, set BenchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException to false. The following assemblies have jit optimization disabled:" + string.Join("", assembliesViolatingRuleJitOptimization.Select(assembly => Environment.NewLine + assembly)));
+                throw new Exception("To allow benchmarks to be executed when jit optimization is disabled, set BenchmarkProcessorConfiguration.IfJitOptimizerIsDisabledThenThrowException to false. The following assemblies have jit optimization disabled:" + string.Join("", assembliesViolatingRuleJitOptimization.Select(assembly => Environment.NewLine + assembly)));
         }
 
         public IEnumerable<IBenchmarkComponentResult> Execute<T>(BenchmarkProcessorConfiguration benchmarkProcessorConfiguration, params Func<T>[] benchmarkComponents)
             where T : IBenchmarkComponent<IOperationBase>
         {
-            if (benchmarkProcessorConfiguration.IfJitOptimizerDisabledThenThrowException)
+            if (benchmarkProcessorConfiguration.IfJitOptimizerIsDisabledThenThrowException)
             {
                 AppDomain.CurrentDomain.AssemblyLoad += (sender, args) => EnsureAssembliesAreAllowed(benchmarkProcessorConfiguration, new [] {args.LoadedAssembly});
 

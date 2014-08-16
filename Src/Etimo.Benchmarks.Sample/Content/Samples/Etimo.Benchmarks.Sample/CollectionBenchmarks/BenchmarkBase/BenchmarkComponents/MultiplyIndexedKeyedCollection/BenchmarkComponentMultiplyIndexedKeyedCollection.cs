@@ -7,51 +7,51 @@ using Etimo.Benchmarks.Sample.Data;
 
 namespace Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents.MultiplyIndexedKeyedCollection
 {
-public class BenchmarkComponentMultiplyIndexedKeyedCollection : BenchmarkComponentBase
-{
-    public override string Name
+    public class BenchmarkComponentMultiplyIndexedKeyedCollection : BenchmarkComponentBase
     {
-        get { return "MultiplyIndexedKeyedCollection"; }
-    }
-
-    public BenchmarkComponentMultiplyIndexedKeyedCollection(IEnumerable<CountryOrRegionGdpData> listOfCountryOrRegionGdpData)
-    {
-        MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData = new MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData();
-
-        RootOperation = new CollectionBenchmarkRootOperationGroup()
+        public override string Name
         {
-            Operation1 = new OperationInitialization()
+            get { return "MultiplyIndexedKeyedCollection"; }
+        }
+
+        public BenchmarkComponentMultiplyIndexedKeyedCollection(IEnumerable<CountryOrRegionGdpData> listOfCountryOrRegionGdpData)
+        {
+            MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData = new MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData();
+
+            RootOperation = new CollectionBenchmarkRootOperationGroup()
             {
-                Delegate = () =>
+                Operation1 = new OperationInitialization()
                 {
-                    foreach (var item in listOfCountryOrRegionGdpData)
-                        multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.Add(item);
+                    Delegate = () =>
+                    {
+                        foreach (var item in listOfCountryOrRegionGdpData)
+                            multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.Add(item);
+                    },
                 },
-            },
-            Operation2 = new OperationGetGdp2010ByCode()
-            {
-                Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByCountryCode["SWE500"].GdpYear2010.Value
-            },
-            Operation3 = new OperationGetGdp2010ByName()
-            {
-                Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByCountryName["Sweden500"].GdpYear2010.Value,
-            },
-            Operation4 = new OperationGroupByIncrease()
-            {
-                Operation1 = new OperationHasFiveDoubledCount()
+                Operation2 = new OperationGetGdp2010ByCode()
                 {
-                    Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByHasFiveDoubled[true].Count(),
+                    Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByCountryCode["SWE500"].GdpYear2010.Value
                 },
-                Operation2 = new OperationHasTenDoubledCount()
+                Operation3 = new OperationGetGdp2010ByName()
                 {
-                    Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByHasTenDoubled[true].Count(),
+                    Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByCountryName["Sweden500"].GdpYear2010.Value,
                 },
-                Operation3 = new OperationHasTwentyDoubledCount()
+                Operation4 = new OperationGroupByIncrease()
                 {
-                    Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByHasTwentyDoubled[true].Count(),
+                    Operation1 = new OperationHasFiveDoubledCount()
+                    {
+                        Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByHasFiveDoubled[true].Count(),
+                    },
+                    Operation2 = new OperationHasTenDoubledCount()
+                    {
+                        Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByHasTenDoubled[true].Count(),
+                    },
+                    Operation3 = new OperationHasTwentyDoubledCount()
+                    {
+                        Delegate = () => multiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.ByHasTwentyDoubled[true].Count(),
+                    },
                 },
-            },
-        };
+            };
+        }
     }
-}
 }

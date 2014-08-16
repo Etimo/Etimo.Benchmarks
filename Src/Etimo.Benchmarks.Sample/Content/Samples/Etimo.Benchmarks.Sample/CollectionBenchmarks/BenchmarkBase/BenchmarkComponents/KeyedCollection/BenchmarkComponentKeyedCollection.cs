@@ -7,51 +7,51 @@ using Etimo.Benchmarks.Sample.Data;
 
 namespace Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents.KeyedCollection
 {
-public class BenchmarkComponentKeyedCollection : BenchmarkComponentBase
-{
-    public override string Name
+    public class BenchmarkComponentKeyedCollection : BenchmarkComponentBase
     {
-        get { return "KeyedCollection"; }
-    }
-
-    public BenchmarkComponentKeyedCollection(IEnumerable<CountryOrRegionGdpData> listOfCountryOrRegionGdpData)
-    {
-        StandardKeyedCollectionOfCountryOrRegionGdpData standardKeyedCollectionOfCountryOrRegionGdpData = new StandardKeyedCollectionOfCountryOrRegionGdpData();
-
-        RootOperation = new CollectionBenchmarkRootOperationGroup()
+        public override string Name
         {
-            Operation1 = new OperationInitialization()
+            get { return "KeyedCollection"; }
+        }
+
+        public BenchmarkComponentKeyedCollection(IEnumerable<CountryOrRegionGdpData> listOfCountryOrRegionGdpData)
+        {
+            StandardKeyedCollectionOfCountryOrRegionGdpData standardKeyedCollectionOfCountryOrRegionGdpData = new StandardKeyedCollectionOfCountryOrRegionGdpData();
+
+            RootOperation = new CollectionBenchmarkRootOperationGroup()
             {
-                Delegate = () =>
+                Operation1 = new OperationInitialization()
                 {
-                    foreach (var item in listOfCountryOrRegionGdpData)
-                        standardKeyedCollectionOfCountryOrRegionGdpData.Add(item);
+                    Delegate = () =>
+                    {
+                        foreach (var item in listOfCountryOrRegionGdpData)
+                            standardKeyedCollectionOfCountryOrRegionGdpData.Add(item);
+                    },
                 },
-            },
-            Operation2 = new OperationGetGdp2010ByCode()
-            {
-                Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData["SWE500"].GdpYear2010.Value
-            },
-            Operation3 = new OperationGetGdp2010ByName()
-            {
-                Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData.Single(q => q.CountryName == "Sweden500").GdpYear2010.Value,
-            },
-            Operation4 = new OperationGroupByIncrease()
-            {
-                Operation1 = new OperationHasFiveDoubledCount()
+                Operation2 = new OperationGetGdp2010ByCode()
                 {
-                    Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData.Count(countryOrRegionGdpData => countryOrRegionGdpData.GdpYear2010 >= countryOrRegionGdpData.GdpYear1960 * 5),
+                    Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData["SWE500"].GdpYear2010.Value
                 },
-                Operation2 = new OperationHasTenDoubledCount()
+                Operation3 = new OperationGetGdp2010ByName()
                 {
-                    Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData.Count(countryOrRegionGdpData => countryOrRegionGdpData.GdpYear2010 >= countryOrRegionGdpData.GdpYear1960 * 10),
+                    Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData.Single(q => q.CountryName == "Sweden500").GdpYear2010.Value,
                 },
-                Operation3 = new OperationHasTwentyDoubledCount()
+                Operation4 = new OperationGroupByIncrease()
                 {
-                    Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData.Count(countryOrRegionGdpData => countryOrRegionGdpData.GdpYear2010 >= countryOrRegionGdpData.GdpYear1960 * 20),
+                    Operation1 = new OperationHasFiveDoubledCount()
+                    {
+                        Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData.Count(countryOrRegionGdpData => countryOrRegionGdpData.GdpYear2010 >= countryOrRegionGdpData.GdpYear1960 * 5),
+                    },
+                    Operation2 = new OperationHasTenDoubledCount()
+                    {
+                        Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData.Count(countryOrRegionGdpData => countryOrRegionGdpData.GdpYear2010 >= countryOrRegionGdpData.GdpYear1960 * 10),
+                    },
+                    Operation3 = new OperationHasTwentyDoubledCount()
+                    {
+                        Delegate = () => standardKeyedCollectionOfCountryOrRegionGdpData.Count(countryOrRegionGdpData => countryOrRegionGdpData.GdpYear2010 >= countryOrRegionGdpData.GdpYear1960 * 20),
+                    },
                 },
-            },
-        };
+            };
+        }
     }
-}
 }
