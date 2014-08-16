@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.VisualBasic.FileIO;
 
-namespace Samples.Etimo.Benchmarks.Data
+namespace Etimo.Benchmarks.Sample.Data
 {
     public class DataImporter
     {

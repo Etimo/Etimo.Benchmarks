@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
-using Samples.Etimo.Benchmarks.Data;
+using Etimo.Benchmarks.Sample.Data;
 
-namespace Samples.Etimo.Benchmarks.Collections
+namespace Etimo.Benchmarks.Sample.Collections
 {
     public class StandardKeyedCollectionOfCountryOrRegionGdpData : KeyedCollection<string, CountryOrRegionGdpData>
     {

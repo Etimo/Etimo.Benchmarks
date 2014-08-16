@@ -1,4 +1,4 @@
-namespace Samples.Etimo.Benchmarks.Data
+namespace Etimo.Benchmarks.Sample.Data
 {
     public class CountryOrRegionGdpData
     {

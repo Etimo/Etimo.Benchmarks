@@ -1,7 +1,7 @@
 using Etimo.Benchmarks.Interfaces.Components;
-using Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.OperationGroups;
+using Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.OperationGroups;
 
-namespace Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents
+namespace Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents
 {
     public abstract class BenchmarkComponentBase : IBenchmarkComponent<CollectionBenchmarkRootOperationGroup>
     {

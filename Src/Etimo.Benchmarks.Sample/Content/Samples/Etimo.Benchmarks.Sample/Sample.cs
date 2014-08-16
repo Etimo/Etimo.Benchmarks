@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Etimo.Benchmarks.Interfaces.Results;
 using Etimo.Benchmarks.Processors;
-using Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents;
-using Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents.KeyedCollection;
-using Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents.MultiplyIndexedKeyedCollection;
-using Samples.Etimo.Benchmarks.Data;
+using Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents;
+using Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents.KeyedCollection;
+using Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents.MultiplyIndexedKeyedCollection;
+using Etimo.Benchmarks.Sample.Data;
 
-namespace Samples.Etimo.Benchmarks
+namespace Etimo.Benchmarks.Sample
 {
     public class Sample
     {
@@ -49,9 +48,7 @@ namespace Samples.Etimo.Benchmarks
                 IOperationGroupResult benchmarkResultTyped = (IOperationGroupResult)benchmarkResult;
 
                 foreach (IOperationResultBase childOperationResult in benchmarkResultTyped.ChildOperationResults)
-                {
                     formattedResults += Environment.NewLine + FormatBenchmarkResults(childOperationResult, nestingLevel + 1);
-                }
             }
 
             return formattedResults;

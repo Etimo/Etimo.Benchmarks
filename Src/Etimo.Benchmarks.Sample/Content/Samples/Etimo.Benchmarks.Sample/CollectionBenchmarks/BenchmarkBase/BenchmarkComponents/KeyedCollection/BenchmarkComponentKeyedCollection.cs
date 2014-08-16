@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-using Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.OperationGroups;
-using Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.Operations;
-using Samples.Etimo.Benchmarks.Collections;
-using Samples.Etimo.Benchmarks.Data;
+using Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.OperationGroups;
+using Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.Operations;
+using Etimo.Benchmarks.Sample.Collections;
+using Etimo.Benchmarks.Sample.Data;
 
-namespace Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents.KeyedCollection
+namespace Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.BenchmarkComponents.KeyedCollection
 {
 public class BenchmarkComponentKeyedCollection : BenchmarkComponentBase
 {

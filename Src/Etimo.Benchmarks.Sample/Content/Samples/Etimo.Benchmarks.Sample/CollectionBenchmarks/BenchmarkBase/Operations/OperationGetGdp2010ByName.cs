@@ -1,7 +1,7 @@
 using System;
 using Etimo.Benchmarks.Interfaces.Operations;
 
-namespace Samples.Etimo.Benchmarks.CollectionBenchmarks.BenchmarkBase.Operations
+namespace Etimo.Benchmarks.Sample.CollectionBenchmarks.BenchmarkBase.Operations
 {
     public class OperationGetGdp2010ByName : IOperationWithFunc<decimal>
     {

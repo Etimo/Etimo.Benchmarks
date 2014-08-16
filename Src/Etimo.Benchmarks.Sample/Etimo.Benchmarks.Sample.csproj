@@ -53,26 +53,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Samples\Etimo.Benchmarks\Data\DataImporter.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\BenchmarkComponents\BenchmarkComponentBase.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\BenchmarkComponents\MultiplyIndexedKeyedCollection\BenchmarkComponentMultiplyIndexedKeyedCollection.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\BenchmarkComponents\KeyedCollection\BenchmarkComponentKeyedCollection.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\OperationGroups\CollectionBenchmarkRootOperationGroup.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\Data\CountryOrRegionGdpData.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\Collections\MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByCode.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByName.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\Operations\OperationGroupByIncrease.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\Operations\OperationHasFiveDoubledCount.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\Operations\OperationHasTenDoubledCount.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\Operations\OperationHasTwentyDoubledCount.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\CollectionBenchmarks\BenchmarkBase\Operations\OperationInitializationBase.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\Collections\StandardKeyedCollectionOfCountryOrRegionGdpData.cs" />
-    <Content Include="Content\Samples\Etimo.Benchmarks\Sample.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\Data\DataImporter.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\BenchmarkComponents\BenchmarkComponentBase.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\BenchmarkComponents\MultiplyIndexedKeyedCollection\BenchmarkComponentMultiplyIndexedKeyedCollection.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\BenchmarkComponents\KeyedCollection\BenchmarkComponentKeyedCollection.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\OperationGroups\CollectionBenchmarkRootOperationGroup.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\Data\CountryOrRegionGdpData.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\Collections\MultiplyIndexedKeyedCollectionOfCountryOrRegionGdpData.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByCode.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\Operations\OperationGetGdp2010ByName.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\OperationGroups\OperationGroupByIncrease.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\Operations\OperationHasFiveDoubledCount.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\Operations\OperationHasTenDoubledCount.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\Operations\OperationHasTwentyDoubledCount.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\CollectionBenchmarks\BenchmarkBase\Operations\OperationInitializationBase.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\Collections\StandardKeyedCollectionOfCountryOrRegionGdpData.cs" />
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\Sample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Samples\Etimo.Benchmarks\Data\The World Bank - GDP Per Capita.csv">
+    <Content Include="Content\Samples\Etimo.Benchmarks.Sample\Data\The World Bank - GDP Per Capita.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Etimo.Benchmarks.Sample.nuspec">
