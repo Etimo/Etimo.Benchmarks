@@ -6,15 +6,15 @@ namespace Etimo.Benchmarks.Processors
         public int BenchmarkIterationCount { get; set; }
         public bool GarbageCollectBeforeEachOperation { get; set; }
         public bool IfDebuggerIsAttachedThenThrowException { get; set; }
-        public bool IfJitOptimizerDisabledThenThrowException { get; set; }
+        public bool IfJitOptimizerIsDisabledThenThrowException { get; set; }
 
         public BenchmarkProcessorConfiguration()
         {
-            WarmupIterationCount = 5;
+            WarmupIterationCount = 2;
             BenchmarkIterationCount = 10;
             GarbageCollectBeforeEachOperation = true;
             IfDebuggerIsAttachedThenThrowException = true;
-            IfJitOptimizerDisabledThenThrowException = true;
+            IfJitOptimizerIsDisabledThenThrowException = true;
         }
     }
 }
