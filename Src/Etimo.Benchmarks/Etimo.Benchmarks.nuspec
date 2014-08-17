@@ -6,9 +6,22 @@
     <title>Etimo.Benchmarks</title>
     <authors>Etimo</authors>
     <owners>Etimo</owners>
-    <description>Benchmark package published by Etimo</description>
+    <summary>A lightweight performance benchmark tool published by Etimo</summary>
+    <description>
+      A lightweight performance benchmark tool published by Etimo
+      
+      The key points are:
+      - Lightweight and simple to use, for individual component benchmarking or for comparing different components
+      - Supports specifying nested groups of delegates to be benchmarked hierarchically and in order
+      - Focuses on the benchmark processing and simply returns an object with the results that can easily be consumed in order to write the results to the console/file/other
+      - Released to the public domain, so you can do what you want with the source code
+
+      Read more at http://etimo.se/blog/etimo-benchmarks-lightweight-net-benchmark-tool/
+      
+      
+    </description>
     <licenseUrl>http://unlicense.org/UNLICENSE</licenseUrl>
-    <!--<projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>-->
+    <projectUrl>http://etimo.se/blog/etimo-benchmarks-lightweight-net-benchmark-tool/</projectUrl>
     <iconUrl>https://avatars0.githubusercontent.com/u/8019178?s=140</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>Etimo Benchmark Performance</tags>

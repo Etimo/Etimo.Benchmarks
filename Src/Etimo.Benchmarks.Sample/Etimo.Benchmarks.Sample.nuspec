@@ -6,14 +6,21 @@
     <title>Etimo.Benchmarks.Sample</title>
     <authors>Etimo</authors>
     <owners>Etimo</owners>
-    <description>Sample for using package Etimo.Benchmarks published by Etimo</description>
+    <summary>Sample for using package Etimo.Benchmarks</summary>
+    <description>
+      Sample for using package Etimo.Benchmarks
+
+      Read more at http://etimo.se/blog/etimo-benchmarks-lightweight-net-benchmark-tool/
+      
+      
+    </description>
     <licenseUrl>http://unlicense.org/UNLICENSE</licenseUrl>
-    <!--<projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>-->
+    <projectUrl>http://etimo.se/blog/etimo-benchmarks-lightweight-net-benchmark-tool/</projectUrl>
     <iconUrl>https://avatars0.githubusercontent.com/u/8019178?s=140</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>Etimo Benchmark Performance</tags>
-	<frameworkAssemblies>
-		<frameworkAssembly assemblyName="Microsoft.VisualBasic" />
-	</frameworkAssemblies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.VisualBasic" />
+    </frameworkAssemblies>
   </metadata>
 </package>
