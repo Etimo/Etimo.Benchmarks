@@ -35,9 +35,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Etimo.Benchmarks, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Etimo.Benchmarks, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Etimo.Benchmarks.2.0.2\lib\net40\Etimo.Benchmarks.dll</HintPath>
+      <HintPath>..\packages\Etimo.Benchmarks.3.0.0\lib\net40\Etimo.Benchmarks.dll</HintPath>
     </Reference>
     <Reference Include="Etimo.Common.Collections, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
